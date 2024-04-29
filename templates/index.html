@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=".../static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Your CSS styles go here */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .clearfix {
+        clear: both;
+      }
+      .header-banner {
+        padding-top: 35px;
+        padding-bottom: 100px;
+        color: #ffffff;
+        font-family: Helvetica, serif;
+        font-weight: 100;
+        /* background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg"); */
+        background-attachment: scroll, scroll;
+        background-position: left top, center center;
+        background-repeat: repeat-y, no-repeat;
+        background-size: contain, cover;
+      }
+      .container-width {
+        width: 90%;
+        max-width: 1150px;
+        margin: 0 auto;
+      }
+      #i4wp {
+        position: static;
+        height: 100vh;
+        width: 100vw;
+        background-repeat: repeat;
+        background-position: left top;
+        background-attachment: scroll;
+        background-size: auto;
+        background-image: linear-gradient(#6060a9 0%, #6060a9 100%);
+        background-image-color: unset;
+        background-image-gradient: unset;
+        background-image-gradient-dir: unset;
+        background-image-gradient-type: unset;
+        border: 0px solid black;
+        float: right;
+        font-family: Georgia, serif;
+      }
+      .tab {
+        padding: 7px 14px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-right: 10px;
+        color: #000000;
+      }
+      .tab:focus {
+        outline: none;
+      }
+      .tab.tab-active {
+        background-color: #cccccc;
+        color: #000000;
+      }
+      .tab-container {
+        display: inline-block;
+      }
+      .tab-content {
+        animation: fadeEffect 1s;
+      }
+      .tab-contents {
+        min-height: 100px;
+        padding: 10px;
+      }
+      .gjs-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        padding: 10px;
+      }
+      .gjs-cell {
+        min-height: 75px;
+        flex-grow: 1;
+        flex-basis: 100%;
+      }
+      #i91k {
+        height: 100%;
+      }
+      #i9zj {
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+      }
+      #i7i1 {
+        margin: 32px 32px 32px 32px;
+        background-repeat: repeat;
+        background-position: left top;
+        background-attachment: scroll;
+        background-size: auto;
+        background-image: linear-gradient(#e8e8e8 0%, #e8e8e8 100%);
+        border-radius: 16px 16px 16px 16px;
+        height: 100%;
+        min-height: 100%;
+      }
+      #i3bg {
+        min-height: 100%;
+        height: 100%;
+      }
+      #ii1ua {
+        height: 10%;
+      }
+      #ir5kj {
+        height: 100%;
+      }
+      #im59l {
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 auto;
+        align-self: center;
+      }
+      #ics4y {
+        min-height: 100%;
+        left: 50%;
+        right: 50%;
+      }
+      #iz0sn {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1 0 auto;
+        label-parent-flex: 0;
+        float: left;
+        margin: auto 0px auto 0;
+        align-self: center;
+        width: auto;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+      }
+      #il6fk {
+        color: #000000;
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 1.4px;
+      }
+      #ik03w {
+        min-height: auto;
+        height: 100%;
+      }
+      #i8r2j {
+        padding: 10px;
+        color: #000000;
+        font-family: Helvetica, sans-serif;
+        font-weight: 600;
+        text-align: right;
+      }
+      #iiqhj {
+        min-height: auto;
+        display: flex;
+      }
+      #ipur9 {
+        text-align: left;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+        margin: 0px 64px 0px 0px;
+        border-radius: 16px 16px 16px 16px;
+      }
+      #ip3in {
+        min-height: auto;
+        height: 100%;
+      }
+      #i7nrf {
+        min-height: auto;
+        height: 100%;
+      }
+      #iu5ej {
+        align-self: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        float: right;
+        display: flex;
+        margin: 0 32px 0 0;
+        width: 200px;
+        height: 30px;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+        border-radius: 16px 16px 16px 16px;
+        border: none;
+      }
+
+      #iu5ej:hover {
+        border: 1px solid #000;
+      }
+      #iu5ej:focus {
+        border: 1px solid #000;
+      }
+
+      #i1kkh {
+        align-self: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        display: flex;
+        float: left;
+        margin: 0 0 0 32px;
+        width: 200px;
+        height: 30px;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        border-radius: 16px 16px 16px 16px;
+        border: none;
+      }
+      #i1kkh:hover {
+        border: 1px solid #000;
+      }
+      #i1kkh:focus {
+        border: 1px solid #000;
+      }
+      #i4uzg {
+        height: 2px;
+        min-height: 2px;
+        margin: 0px 32px 32px 32px;
+        padding: 0px 10px 0 10px;
+        border: 1px solid #e8e8e8;
+      }
+      #ikthi {
+        min-height: auto;
+      }
+      @keyframes fadeEffect {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @media (max-width: 768px) {
+        .gjs-row {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="i4wp" class="header-banner">
+      <div class="container-width">
+        <div class="clearfix"></div>
+      </div>
+      <div class="gjs-row" id="i91k">
+        <div class="gjs-cell" id="i9zj">
+          <div class="gjs-row" id="i7i1">
+            <div class="gjs-cell" id="i3bg">
+              <div class="gjs-row" id="ii1ua">
+                <div class="gjs-cell" id="ics4y">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      justify-items: center;
+                    "
+                  >
+                    <span id="il6fk">Stock Search</span>
+                  </div>
+                </div>
+              </div>
+              <div class="gjs-row" id="ir5kj">
+                <div class="gjs-cell" id="ik03w">
+                  <div id="i8r2j">
+                    Enter Stock Ticker Symbol <span style="color: red">*</span>
+                  </div>
+                </div>
+                <div class="gjs-cell" id="iiqhj">
+                  <input
+                    type="text"
+                    id="ipur9"
+                    style="padding-left: 12px; padding-right: 12px"
+                  />
+                </div>
+              </div>
+              <div class="gjs-row" id="im59l">
+                <div class="gjs-cell" id="i7nrf">
+                  <button
+                    type="button"
+                    class="submitButton"
+                    id="iu5ej"
+                    onclick="submitData()"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      justify-items: center;
+                      align-items: center;
+                    "
+                  >
+                    Submit
+                  </button>
+                </div>
+                <div class="gjs-cell" id="ip3in">
+                  <button
+                    type="button"
+                    class="clearButton"
+                    id="i1kkh"
+                    onclick="clearScreenData()"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      justify-items: center;
+                      align-items: center;
+                    "
+                  >
+                    Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gjs-row" id="i4uzg">
+            <div class="gjs-cell" id="ikthi"></div>
+          </div>
+          <div class="gjs-row" id="i8za" style="display: none">
+            <div class="gjs-cell" id="it67">
+              <div id="i1g9q">
+                <div
+                  role="tablist"
+                  class="tab-container"
+                  style="
+                    display: flex;
+                    background-color: #fbfbfb;
+                    min-height: 50px;
+                    border-radius: 16px;
+                    justify-items: center;
+                    align-items: center;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                  "
+                >
+                  <div
+                    role="tab"
+                    aria-controls="i4xei"
+                    id="it21l"
+                    class="tab"
+                    style=""
+                  >
+                    <span>Company Outlook</span>
+                  </div>
+                  <div role="tab" aria-controls="ip8cr" id="i1tyj" class="tab">
+                    <span id="iwd9z">Stock Summary</span>
+                  </div>
+                  <div role="tab" aria-controls="ikp1k" id="i0bb7" class="tab">
+                    <span>Charts</span>
+                  </div>
+                </div>
+                <div class="tab-contents">
+                  <div
+                    role="tabpanel"
+                    id="i4xei"
+                    aria-labelledby="it21l"
+                    hidden
+                    class="tab-content"
+                  >
+                    <div style="width: 100%; display: none" id="tableOne"></div>
+                  </div>
+                  <div
+                    role="tabpanel"
+                    id="ip8cr"
+                    aria-labelledby="i1tyj"
+                    hidden
+                    class="tab-content"
+                  >
+                    <div style="width: 100%; display: none" id="tableTwo"></div>
+                  </div>
+                  <div
+                    role="tabpanel"
+                    id="ikp1k"
+                    aria-labelledby="i0bb7"
+                    hidden
+                    class="tab-content"
+                  >
+                    <div>Nothing here yet</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Display Error -->
+
+          <div id="errorColumOne" style="display: none"></div>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script>
+    function appendTableOne(data, data2) {
+      var columnOne = document.getElementById("i8za");
+      var errorColumn = document.getElementById("errorColumOne");
+      errorColumn.style = "display: none;";
+      columnOne.style = "display: inline-block; width: 100%;";
+      var tableOneId = document.getElementById("tableOne");
+      var tableTwoId = document.getElementById("tableTwo");
+
+      let date = new Date(data2.timestamp);
+
+      // Extract the date part
+      let year = date.getFullYear();
+      let month = String(date.getMonth() + 1).padStart(2, "0"); // Month is zero-indexed
+      let day = String(date.getDate()).padStart(2, "0");
+
+      let dateOnly = `${year}-${month}-${day}`;
+
+      var tableOneHtmlContent = `
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:40%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Company Name</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${data.name}</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:40%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Stock Ticker Symbol</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${data.ticker}</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:40%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Stock Exchange Code</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${data.exchangeCode}</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:40%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Company Start Date</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${data.startDate}</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; height: 100%;" >
+          <div style="display: flex; width:40%; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding: 12px; font-size: larger;">Description</div>
+          <div style="display: flex; width: 100%;  background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding: 12px; font-size: larger;">${data.description}</div>
+      </div>
+      `;
+
+      var tableTwoHtmlContent = `
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Stock Ticker Symbol</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.ticker
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Trading Day</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${dateOnly}</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Previous Closing Price</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.prevClose
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Opening Price</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.open
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">High Price</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.high
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Low Price</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.low
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Last Price</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.last
+          }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Change</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            (data2.last - data2.prevClose).toFixed(2) + " "
+          } ${
+        (data2.last - data2.prevClose).toFixed(2) > 0
+          ? `<i class="fa fa-caret-up" style="color:green"></i>`
+          : `<i class="fa fa-caret-down" style="color:red"></i>`
+      }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Change Percent</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            (((data2.last - data2.prevClose) / data2.prevClose) * 100).toFixed(
+              2
+            ) + "% "
+          } ${
+        (((data2.last - data2.prevClose) / data2.prevClose) * 100).toFixed(2) >
+        0
+          ? `<i class="fa fa-caret-up" style="color:green"></i>`
+          : `<i class="fa fa-caret-down" style="color:red"></i>`
+      }</div>
+      </div>
+      <div style="display: flex; justify-items: start; align-items: start; flex-grow: 1; border-bottom: 1px solid #000;" >
+          <div style="display: flex; width:50%; height: 40px; background-color: #CCCCCC; justify-items: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">Number of Shares Traded</div>
+          <div style="display: flex; width: 100%; height: 40px; background-color: #FBFBFB; justify-content: center; align-items: center; color: #000000; padding-left: 12px; padding-right: 12px; font-size: larger;">${
+            data2.volume
+          }</div>
+      </div>
+      `;
+
+      tableOneId.innerHTML = tableOneHtmlContent;
+      tableTwoId.innerHTML = tableTwoHtmlContent;
+      tableOneId.style = "display: inline-block; width: 100%;";
+      tableTwoId.style = "display:  inline-block; width: 100%;";
+    }
+
+    function appendErrorMessage(message) {
+      var errorColumn = document.getElementById("errorColumOne");
+      var columnOne = document.getElementById("i8za");
+      columnOne.style = "display: none;";
+
+      var errorMessageHtmlContent = `
+      <h2 style="margin-bottom: -10px;">${message.header}</h2>
+      <p>${message.message}</p>
+      `;
+      errorColumn.innerHTML = errorMessageHtmlContent;
+      errorColumn.style =
+        "display: flex; flex-direction: column; gap: 2; height: 100px; width: 100%; color: #000000; justify-content: center; justify-items: center; align-items: center; background-color: #FBFBFB; border-radius: 16px 16px 16px 16px; padding: 16px;";
+    }
+
+    function clearScreenData() {
+      var inputField = document.getElementById("ipur9");
+      var columnOne = document.getElementById("i8za");
+      var errorColumn = document.getElementById("errorColumOne");
+      errorColumn.style = "display: none;";
+      columnOne.style = "display: none;";
+      inputField.value = "";
+    }
+
+    function submitData() {
+      // Get the input value
+      var inputValue = document.getElementById("ipur9").value;
+
+      if (inputValue) {
+        // Construct JSON object
+        var jsonData = {
+          input: inputValue,
+        };
+
+        // Send POST request to Flask backend
+        fetch(`/process_input/${inputValue}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // body: JSON.stringify(jsonData),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              appendErrorMessage({
+                header: "Error: Network Unresponsive ",
+                message: "Network response was not ok, Please try again.",
+              });
+              throw new Error("Network response was not ok");
+            }
+            //console.log(JSON.stringify(response.json));
+            return response.json();
+          })
+          .then((data) => {
+            // Handle response data here
+            if (data.data.error == "API call failed") {
+              appendErrorMessage({
+                header: "Error: No Record Found",
+                message: "No records found, please enter a valid symbol.",
+              });
+            } else {
+              const dailyData = data.data.daily;
+              const iexData = data.data.iex[0];
+              appendTableOne(dailyData, iexData);
+            }
+          })
+          .catch((error) => {
+            // Handle errors here
+            appendErrorMessage({
+              header: "Error: A Problem has occurred! ",
+              message:
+                "There was a problem with the request, Please try again.",
+            });
+            console.error("There was a problem with the request:", error);
+          });
+      } else {
+        appendErrorMessage({
+          header: "Error: Invalid Input Value",
+          message: "Input field can't be empty, Please try again.",
+        });
+      }
+    }
+
+    var props = {
+      i1g9q: {
+        classactive: "tab-active",
+        selectortab: "aria-controls",
+      },
+    };
+    var ids = Object.keys(props)
+      .map(function (id) {
+        return "#" + id;
+      })
+      .join(",");
+    var els = document.querySelectorAll(ids);
+    for (var i = 0, len = els.length; i < len; i++) {
+      var el = els[i];
+      (function (t) {
+        var e,
+          n,
+          r = this,
+          o = t.classactive,
+          a = t.selectortab,
+          c = window,
+          i = c.history,
+          s = c._isEditor,
+          b = "[role=tab]",
+          p = document,
+          l = p.body,
+          u = p.location,
+          f =
+            l.matchesSelector ||
+            l.webkitMatchesSelector ||
+            l.mozMatchesSelector ||
+            l.msMatchesSelector,
+          y = function (t, e) {
+            for (var n = t || [], r = 0; r < n.length; r++) e(n[r], r);
+          },
+          d = function (t) {
+            return t.getAttribute(a);
+          },
+          O = function (t, e) {
+            return t.querySelector(e);
+          },
+          g = function () {
+            return r.querySelectorAll(b);
+          },
+          j = function (t, e) {
+            return !s && (t.tabIndex = e);
+          },
+          h = function (t) {
+            y(g(), function (t) {
+              (t.className = t.className.replace(o, "").trim()),
+                (t.ariaSelected = "false"),
+                j(t, "-1");
+            }),
+              y(r.querySelectorAll("[role=tabpanel]"), function (t) {
+                return (t.hidden = !0);
+              }),
+              (t.className += " " + o),
+              (t.ariaSelected = "true"),
+              j(t, "0");
+            var e = d(t),
+              n = e && O(r, "#".concat(e));
+            n && (n.hidden = !1);
+          },
+          v = O(r, ".".concat(o).concat(b));
+        (v =
+          v ||
+          ((n = (u.hash || "").replace("#", "")) &&
+            O(r, ((e = a), "".concat(b, "[").concat(e, "=").concat(n, "]")))) ||
+          O(r, b)) && h(v),
+          r.addEventListener("click", function (t) {
+            var e = t.target,
+              n = f.call(e, b);
+            if (
+              (n ||
+                ((e = (function (t) {
+                  var e;
+                  return (
+                    y(g(), function (n) {
+                      e || (n.contains(t) && (e = n));
+                    }),
+                    e
+                  );
+                })(e)) &&
+                  (n = 1)),
+              n && !t.__trg && e.className.indexOf(o) < 0)
+            ) {
+              t.preventDefault(), (t.__trg = 1), h(e);
+              var r = d(e);
+              try {
+                i && i.pushState(null, null, "#".concat(r));
+              } catch (t) {}
+            }
+          });
+      }).bind(el)(props[el.id]);
+    }
+  </script>
+</html>

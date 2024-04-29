@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  .clearfix{
+    clear:both;
+  }
+  .header-banner{
+    padding-top:35px;
+    padding-bottom:100px;
+    color:#ffffff;
+    font-family:Helvetica, serif;
+    font-weight:100;
+    /* background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg"); */
+    background-attachment:scroll, scroll;
+    background-position:left top, center center;
+    background-repeat:repeat-y, no-repeat;
+    background-size:contain, cover;
+  }
+  .container-width{
+    width:90%;
+    max-width:1150px;
+    margin:0 auto;
+  }
+  #i4wp{
+    position:static;
+    height:100vh;
+    width:100vw;
+    background-repeat:repeat;
+    background-position:left top;
+    background-attachment:scroll;
+    background-size:auto;
+    background-image:linear-gradient(#6060a9 0%, #6060a9 100%);
+    background-image-color:unset;
+    background-image-gradient:unset;
+    background-image-gradient-dir:unset;
+    background-image-gradient-type:unset;
+    border:0px solid black;
+    float:right;
+    font-family:Georgia, serif;
+  }
+  .tab{
+    padding:7px 14px;
+    display:inline-block;
+    border-radius:3px;
+    margin-right:10px;
+  }
+  .tab:focus{
+    outline:none;
+  }
+  .tab.tab-active{
+    background-color:#0d94e6;
+    color:white;
+  }
+  .tab-container{
+    display:inline-block;
+  }
+  .tab-content{
+    animation:fadeEffect 1s;
+  }
+  .tab-contents{
+    min-height:100px;
+    padding:10px;
+  }
+  .gjs-row{
+    display:flex;
+    justify-content:flex-start;
+    align-items:stretch;
+    flex-wrap:nowrap;
+    padding:10px;
+  }
+  .gjs-cell{
+    min-height:75px;
+    flex-grow:1;
+    flex-basis:100%;
+  }
+  #i91k{
+    height:100%;
+  }
+  #i9zj{
+    justify-content:center;
+    flex-direction:column;
+    align-self:center;
+  }
+  #i7i1{
+    margin:32px 32px 32px 32px;
+    background-repeat:repeat;
+    background-position:left top;
+    background-attachment:scroll;
+    background-size:auto;
+    background-image:linear-gradient(#e8e8e8 0%, #e8e8e8 100%);
+    border-radius:16px 16px 16px 16px;
+    height:100%;
+    min-height:100%;
+  }
+  #i3bg{
+    min-height:100%;
+    height:100%;
+  }
+  #ii1ua{
+    height:10%;
+  }
+  #ir5kj{
+    height:100%;
+  }
+  #im59l{
+    justify-content:center;
+    align-items:center;
+    flex:0 1 auto;
+    align-self:center;
+  }
+  #ics4y{
+    min-height:100%;
+    left:50%;
+    right:50%;
+  }
+  #iz0sn{
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex:1 0 auto;
+    label-parent-flex:0;
+    float:left;
+    margin:auto 0px auto 0;
+    align-self:center;
+    width:auto;
+    text-align:center;
+    font-family:Helvetica, sans-serif;
+  }
+  #il6fk{
+    color:#000000;
+    font-weight:700;
+    font-size:32px;
+    letter-spacing:1.4px;
+  }
+  #ik03w{
+    min-height:auto;
+    height:100%;
+  }
+  #i8r2j{
+    padding:10px;
+    color:#000000;
+    font-family:Helvetica, sans-serif;
+    font-weight:600;
+    text-align:right;
+  }
+  #iiqhj{
+    min-height:auto;
+    display:flex;
+  }
+  #ipur9{
+    text-align:left;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex:1 0 auto;
+    margin:0px 64px 0px 0px;
+    border-radius:16px 16px 16px 16px;
+  }
+  #ip3in{
+    min-height:auto;
+    height:100%;
+  }
+  #i7nrf{
+    min-height:auto;
+    height:100%;
+  }
+  #iu5ej{
+    align-self:center;
+    justify-content:center;
+    flex:1 0 auto;
+    float:right;
+    display:flex;
+    margin:0 32px 0 0;
+    width:200px;
+    height:30px;
+    font-family:Helvetica, sans-serif;
+    text-align:center;
+    border-radius:16px 16px 16px 16px;
+  }
+  #i1kkh{
+    align-self:center;
+    justify-content:center;
+    flex:1 0 auto;
+    display:flex;
+    float:left;
+    margin:0 0 0 32px;
+    width:200px;
+    height:30px;
+    text-align:center;
+    font-family:Helvetica, sans-serif;
+    border-radius:16px 16px 16px 16px;
+  }
+  #i4uzg{
+    height:2px;
+    min-height:2px;
+    margin:0px 32px 32px 32px;
+    padding:0px 10px 0 10px;
+    border:1px solid #e8e8e8;
+  }
+  #ikthi{
+    min-height:auto;
+  }
+  @keyframes fadeEffect{
+    from{
+      opacity:0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  @media (max-width: 768px){
+    .gjs-row{
+      flex-wrap:wrap;
+    }
+  }
+  
